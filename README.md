@@ -1,3 +1,7 @@
+[![Logsplit](https://raw.githubusercontent.com/Nevon/logsplit/master/logo.png)](https://github.com/Nevon/logsplit)
+
+[![Build Status](https://travis-ci.org/Nevon/logsplit.svg?branch=master)](https://travis-ci.org/Nevon/logsplit)
+
 # Logsplit
 
 Takes large objects and splits them into small chunks for separate logging, with easily followable references.
@@ -74,3 +78,7 @@ console.log(logsplit(message));
 ## License
 
 See [LICENSE](https://github.com/Nevon/logsplit/blob/master/LICENSE) for more details.
+
+### Logotype
+
+[Design Credits: www.Vecteezy.com](https://www.Vecteezy.com/)
