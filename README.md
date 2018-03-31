@@ -56,7 +56,7 @@ npm install logsplit --save
 
 ## <a name="usage"></a> Usage
 
-`logsplit` takes a logging function and an optional options object.
+`createLogSplitter` takes a logging function and an optional options object, and returns a function (`logsplit`).
 
 ```javascript
 const createLogSplitter = require("logsplit");
