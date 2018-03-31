@@ -2,3 +2,10 @@ language: node_js
 node_js:
   - "node"
   - "lts/*"
+deploy:
+  provider: npm
+  email: tommy.brunn@gmail.com
+  api_key: $NPM_TOKEN
+  on:
+    tags: true
+    repo: nevon/logsplit
