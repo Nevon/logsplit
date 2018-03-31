@@ -1,0 +1,19 @@
+{
+  "name": "logsplit",
+  "version": "0.0.1",
+  "description": "Keep your logs focused by splitting up large log objects",
+  "main": "index.js",
+  "repository": "https://github.com/Nevon/logsplit",
+  "author": "Tommy Brunn <tommy.brunn@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "jest": "^22.4.3"
+  },
+  "dependencies": {
+    "uuid": "^3.2.1"
+  }
+}

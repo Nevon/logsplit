@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logsplit Real API response Extracts large objects: Extracted values 1`] = `
+Array [
+  Array [
+    Object {
+      "$item": Object {
+        "id": "xc21Lmbxcib",
+        "joke": "How did the hipster burn the roof of his mouth? He ate the pizza before it was cool.",
+      },
+      "$reference": "Log-Reference-1",
+    },
+  ],
+  Array [
+    Object {
+      "$item": Object {
+        "id": "NRuHJYgaUDd",
+        "joke": "How many hipsters does it take to change a lightbulb? Oh, it's a really obscure number. You've probably never heard of it.",
+      },
+      "$reference": "Log-Reference-2",
+    },
+  ],
+  Array [
+    Object {
+      "$item": Array [
+        Object {
+          "id": "GlGBIY0wAAd",
+          "joke": "How much does a hipster weigh? An instagram.",
+        },
+        "Log-Reference-1",
+        "Log-Reference-2",
+      ],
+      "$reference": "Log-Reference-3",
+    },
+  ],
+]
+`;
+
+exports[`Logsplit Real API response Extracts large objects: Return value 1`] = `
+Object {
+  "results": "Log-Reference-3",
+  "total_jokes": 3,
+}
+`;
