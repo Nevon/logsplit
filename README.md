@@ -6,7 +6,7 @@
 
 Takes large objects and splits them into small chunks for separate logging, with easily followable references.
 
-## Example
+## <a name="example"></a> Example
 
 ```javascript
 const createLogSplitter = require("logsplit");
@@ -45,9 +45,13 @@ console.log(logsplit(message));
 // }
 ```
 
-## <a name="installation"></a> Installation
+## <a name="motivation"></a> Motivation
 
-#### NPM
+For debugging purposes, I find it very useful to log all data that was used in my system. For example, request and response bodies in a web service. However, [due to limitations in logging tools](https://github.com/moby/moby/pull/35831), it's not always desirable to log the entire payload in a single message.
+
+As it is impossible to know up front what parts of your data will be important until after you need it, Logsplit helps you to log a high level message while separately logging the details for when you need them.
+
+## <a name="installation"></a> Installation
 
 ```sh
 npm install logsplit --save
@@ -75,10 +79,14 @@ const logsplit = createLogSplitter(logFunction, options);
 console.log(logsplit(message));
 ```
 
-## License
+### <a name="express-middleware"></a> Express Middleware
+
+Logsplit can be used as an Express middleware for doing request/response body logging. If you are interested in this use case, [open an issue](https://github.com/Nevon/logsplit/issues/new).
+
+## <a name="license"></a> License
 
 See [LICENSE](https://github.com/Nevon/logsplit/blob/master/LICENSE) for more details.
 
-### Logotype
+### <a name="attribution"></a> Attributions
 
-[Design Credits: www.Vecteezy.com](https://www.Vecteezy.com/)
+* [Design Credits: www.Vecteezy.com](https://www.Vecteezy.com/)
