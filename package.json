@@ -1,6 +1,6 @@
 {
   "name": "logsplit",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Keep your logs focused by splitting up large log objects",
   "main": "index.js",
   "repository": "https://github.com/Nevon/logsplit",
