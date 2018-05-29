@@ -1,5 +1,13 @@
 const { keys } = Object;
 
+/*
+ * Implementing our own `forEach` and `forEachKey` (essentially map for
+ * arrays and objects) because using Array.map and Array.reduce was
+ * approximately 50% as performant.
+ * 
+ * https://github.com/Nevon/logsplit/pull/1
+ */
+
 const forEach = (collection, fn) => {
   const out = [];
 
