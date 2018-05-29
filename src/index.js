@@ -1,8 +1,7 @@
-const { assign, keys } = Object;
-
 const envelope = require("./envelope");
 const approximateSize = require("./size");
 const computeOptions = require("./options");
+const { forEach, forEachKey } = require("./collections");
 
 const createLogSplitter = (log, options = {}) => {
   const { maxByteSize, createReference } = computeOptions(options);
@@ -17,26 +16,12 @@ const createLogSplitter = (log, options = {}) => {
 
   const split = message => {
     if (typeof message !== "object" || !message) {
-      if (shouldBeExtracted(message)) {
-        console.warn(
-          "[Logsplit] Unsplittable large item encountered (%d bytes, maxByteSize is %d): %j",
-          approximateSize(message),
-          maxByteSize,
-          message
-        );
-      }
       return message;
     }
 
     const references = Array.isArray(message)
-      ? message.map(split)
-      : keys(message).reduce(
-          (acc, key) =>
-            assign({}, acc, {
-              [key]: split(message[key])
-            }),
-          {}
-        );
+      ? forEach(message, split)
+      : forEachKey(message, split);
 
     return shouldBeExtracted(references) ? extract(references) : references;
   };
